@@ -7,6 +7,7 @@ import BackgroundStars from './components/BackgroundStars';
 import CameraControls from './components/CameraControls';
 import SpaceObjectEditor from './components/SpaceObjectEditor';
 import SpaceObjectsList from './components/SpaceObjectsList';
+// Import Analytics from @vercel/analytics/react only if it's available
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
@@ -113,7 +114,8 @@ function App() {
           />
         </group>
       </Canvas>
-      <Analytics />
+      {/* Render Analytics only if available */}
+      {typeof Analytics !== 'undefined' && <Analytics />}
     </div>
   );
 }
