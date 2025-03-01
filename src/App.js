@@ -7,6 +7,7 @@ import BackgroundStars from './components/BackgroundStars';
 import CameraControls from './components/CameraControls';
 import SpaceObjectEditor from './components/SpaceObjectEditor';
 import SpaceObjectsList from './components/SpaceObjectsList';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   // Galaxy simulation parameters
@@ -112,6 +113,7 @@ function App() {
           />
         </group>
       </Canvas>
+      <Analytics />
     </div>
   );
 }
